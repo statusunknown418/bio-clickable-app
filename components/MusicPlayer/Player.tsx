@@ -17,9 +17,6 @@ export const Player: NextPage<Props> = () => {
         </div>
       </div>
       <div className="flex gap-20 mt-20">
-        <div className="flex items-center justify-center cursor-pointer">
-          <Image src={'/svg/Group 50 (1).svg'} width={25} height={25} alt="" />
-        </div>
         <div
           onClick={() => setIsPlaying(!isPlaying)}
           className={`hover:bg-purple-700 duration-200 w-28 h-28 border ${
@@ -36,9 +33,6 @@ export const Player: NextPage<Props> = () => {
               alt=""
             />
           )}
-        </div>
-        <div className="flex items-center justify-center font-bold cursor-pointer">
-          <Image src={'/svg/Group 51.svg'} width={25} height={25} />
         </div>
       </div>
     </div>
