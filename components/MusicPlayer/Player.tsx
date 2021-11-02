@@ -4,7 +4,7 @@ import { useState } from 'react';
 type Props = {};
 
 export const Player: NextPage<Props> = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   return (
     <div className="flex flex-col items-center justify-center bg-no-repeat">
       <div className="flex gap-10 items-center justify-center mt-20">
