@@ -43,12 +43,31 @@ const Treatment: NextPage<Props> = () => {
                 Intensity
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center">
-              <div
+            <div className=" relative flex flex-col justify-center items-center my-48">
+              <input
+                className={`${styles.range} mt-2`}
+                onChange={(e) => {
+                  let value = e.target.value;
+                  setSlider(value);
+                  console.log(e.target.value);
+                }}
+                type="range"
+                min={0}
+                max={100}
+              />
+              <span className="text-[30px] font-black mr-32 -mt-10">
+                {slider}hz
+              </span>
+              <p className="absolute top-[230px] text-[25px] font-bold">
+                Frequency
+              </p>
+
+              {/* End of changes */}
+              {/* <div
                 style={{ backgroundImage: `url("/svg/Group 50.svg")` }}
                 className="mt-20 w-[332px] bg-no-repeat h-[332px] "
               />
-              <p className="pt-10 text-[25px] font-bold">Frequency</p>
+              <p className="pt-10 text-[25px] font-bold">Frequency</p> */}
             </div>
           </div>
 

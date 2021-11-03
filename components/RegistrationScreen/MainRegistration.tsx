@@ -15,8 +15,8 @@ export const MainRegistration: NextPage<Props> = () => {
         </h2>
       </div>
       {/* <LanguageSelector extraClassnames="mt-[130px]" />
-        * Deprecated for now
-      */}
+       * Deprecated for now
+       */}
       <Inputs extraClassnames="mt-[120px]" />
 
       <BtnNext href={'/treatmentSettings'} />
