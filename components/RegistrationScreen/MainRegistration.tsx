@@ -14,7 +14,9 @@ export const MainRegistration: NextPage<Props> = () => {
           Please enter the required information
         </h2>
       </div>
-      <LanguageSelector extraClassnames="mt-[130px]" />
+      {/* <LanguageSelector extraClassnames="mt-[130px]" />
+        * Deprecated for now
+      */}
       <Inputs extraClassnames="mt-[120px]" />
 
       <BtnNext href={'/treatmentSettings'} />
