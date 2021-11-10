@@ -1,15 +1,16 @@
-import { NextPage } from 'next';
-import { useState } from 'react';
-import { MainLayout } from '../components/Layout/MainLayout';
-import styles from '../styles/customRangeSlider.module.css';
-import Image from 'next/image';
-import { BtnNext } from '../components/Common/BtnNext';
-import { useRouter } from 'next/dist/client/router';
-import { BtnBack } from '../components/Common/BtnBack';
+import { NextPage } from "next";
+import { useState } from "react";
+import { MainLayout } from "../components/Layout/MainLayout";
+import styles from "../styles/customRangeSlider.module.css";
+import Image from "next/image";
+import { BtnNext } from "../components/Common/BtnNext";
+import { useRouter } from "next/dist/client/router";
+import { BtnBack } from "../components/Common/BtnBack";
 type Props = {};
 
 const Treatment: NextPage<Props> = () => {
-  const [slider, setSlider] = useState('0');
+  const [slider, setSlider] = useState("0");
+  const [frequency, setFrequency] = useState("0");
   const router = useRouter();
   return (
     <MainLayout extraClassnames="relative">
@@ -48,7 +49,7 @@ const Treatment: NextPage<Props> = () => {
                 className={`${styles.range} mt-2`}
                 onChange={(e) => {
                   let value = e.target.value;
-                  setSlider(value);
+                  setFrequency(value);
                   console.log(e.target.value);
                 }}
                 type="range"
@@ -56,7 +57,7 @@ const Treatment: NextPage<Props> = () => {
                 max={100}
               />
               <span className="text-[30px] font-black mr-32 -mt-10">
-                {slider}hz
+                {frequency}hz
               </span>
               <p className="absolute top-[230px] text-[25px] font-bold">
                 Frequency
@@ -71,7 +72,7 @@ const Treatment: NextPage<Props> = () => {
             </div>
           </div>
 
-          <BtnNext href={'/start'} />
+          <BtnNext href={"/start"} />
         </div>
       </div>
     </MainLayout>

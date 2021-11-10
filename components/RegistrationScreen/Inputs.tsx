@@ -1,5 +1,5 @@
-import { NextPage } from 'next';
-import Image from 'next/image';
+import { NextPage } from "next";
+import Image from "next/image";
 type Props = {
   extraClassnames?: string;
 };
@@ -12,7 +12,7 @@ export const Inputs: NextPage<Props> = ({ extraClassnames }) => {
       <i className="absolute left-2 pb-[12px]">
         <Image
           alt=""
-          src={'/icons/akar-icons_person.svg'}
+          src={"/icons/akar-icons_person.svg"}
           width={30}
           height={30}
         />
